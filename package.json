@@ -11,6 +11,12 @@
   "bugs": {
     "url": "https://github.com/Dexalot/vscode-solidity-comments/issues"
   },
+  "contributors": [
+    {
+      "name" : "M. Nihat Gurmen",
+      "email" : "ngurmen@chainbloq.com"
+    }
+  ],
   "homepage": "https://github.com/Dexalot/vscode-solidity-comments/blob/master/README.md",
   "repository": {
     "type": "git",
@@ -19,10 +25,10 @@
   "categories": [
     "Other"
   ],
-  "version": "1.0.0",
-  "publisher": "dexalot",
+  "version": "1.0.1",
+  "publisher": "chainbloq",
   "engines": {
-    "vscode": "0.10.0"
+    "vscode": "^0.10.0"
   },
   "main": "./out/extension",
   "activationEvents": [
@@ -46,10 +52,10 @@
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
     "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-    "build": "mkdir -p build && vsce package --out build/"
+    "build": "rm -fr build && mkdir build && vsce package --out build/"
   },
   "devDependencies": {
-    "vscode": "0.10.0"
+    "vscode": "^0.10.0"
   },
   "dependencies": {
     "indent-string": "^2.1.0"
