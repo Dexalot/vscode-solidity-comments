@@ -4,6 +4,16 @@ var indentString = require('indent-string');
 
 import * as parser from './argParser';
 
+// escape all regular expression tags from text to be matched
+const escapeRegExpMatch = function(txt: string) {
+	return txt.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+};
+
+// check if a keyword is in a string exactly or not
+const isExactMatch = (txt: string, keyword: string) => {
+	return new RegExp(`\\b${escapeRegExpMatch(keyword)}\\b`).test(txt)
+}
+
 // given a line number in the code with a function or modifier keyword
 // this function expands the text until an opening '{' or ending ';'
 export function expandToOpeningBracket(cNo: number): string {
@@ -73,12 +83,15 @@ export function activate(ctx:vscode.ExtensionContext) {
 			var lineAt = vscode.window.activeTextEditor.document.lineAt(currentLineNo);
 			var textAtCurrentLine = lineAt.text.trim();
 
-			if(textAtCurrentLine.includes('contract') || textAtCurrentLine.includes('interface') || textAtCurrentLine.includes('library')) {
+			if (isExactMatch(textAtCurrentLine, 'contract') ||
+				isExactMatch(textAtCurrentLine, 'interface') ||
+				isExactMatch(textAtCurrentLine, 'library')
+				) {
 				insertText("/**\n * @author  .\n * @title   .\n * @dev     .\n * @notice  .\n */\n");
 				return;
 			}
 
-			if(textAtCurrentLine.includes('function') || textAtCurrentLine.includes('modifier')) {
+			if(isExactMatch(textAtCurrentLine, 'function') || isExactMatch(textAtCurrentLine, 'modifier')) {
 				selectedText = textAtCurrentLine;
 				if (!selectedText.includes('{') && !selectedText.includes(';')) {
 					selectedText = expandToOpeningBracket(currentLineNo)
