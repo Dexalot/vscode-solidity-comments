@@ -25,7 +25,7 @@
   "categories": [
     "Other"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "chainbloq",
   "engines": {
     "vscode": "^0.10.0"
