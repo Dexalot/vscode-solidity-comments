@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:export-ydpi="102.4"
+   inkscape:export-xdpi="102.4"
+   inkscape:export-filename="C:\Users\nihat\dev\dexalot\vscode-solidity-comments\images\vscode-solidity-comments.png"
+   sodipodi:docname="comment_logo2.svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 120 120;"
+   viewBox="0 0 120 120"
+   y="0px"
+   x="0px"
+   id="Layer_2"
+   version="1.1"><metadata
+   id="metadata57"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs55" /><sodipodi:namedview
+   inkscape:current-layer="Layer_2"
+   inkscape:window-maximized="1"
+   inkscape:window-y="-8"
+   inkscape:window-x="-8"
+   inkscape:cy="58.057069"
+   inkscape:cx="64.28958"
+   inkscape:zoom="6.125"
+   showgrid="false"
+   id="namedview53"
+   inkscape:window-height="1009"
+   inkscape:window-width="1920"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<style
+   id="style2"
+   type="text/css">
+	.st0{fill:#1E1E1E;}
+	.st1{opacity:0.1;clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st2{fill:#608B4D;}
+	.st3{fill:#FFFFFF;}
+</style>
+<circle
+   style="fill:#094809;fill-opacity:1"
+   id="circle4"
+   r="60"
+   cy="60"
+   cx="60"
+   class="st0" />
+
+
+
+<text
+   id="text886"
+   y="36.453053"
+   x="28.056669"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.01px;fill:#ffffff"
+   xml:space="preserve"><tspan
+     y="36.453053"
+     x="28.056669"
+     id="tspan902"
+     sodipodi:role="line">/**</tspan><tspan
+     y="49.786427"
+     x="28.056669"
+     id="tspan904"
+     sodipodi:role="line">  * @title</tspan><tspan
+     y="63.119804"
+     x="28.056669"
+     id="tspan906"
+     sodipodi:role="line">  * @param</tspan><tspan
+     y="76.453178"
+     x="28.056669"
+     id="tspan908"
+     sodipodi:role="line">  * @return</tspan><tspan
+     y="89.786552"
+     x="28.056669"
+     id="tspan910"
+     sodipodi:role="line">  */</tspan></text></svg>

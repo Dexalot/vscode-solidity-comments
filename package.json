@@ -1,28 +1,28 @@
 {
-  "name": "addDocComments",
-  "displayName": "Add jsdoc comments",
-  "description": "Adds jsdoc @param and @return tags for selected function signatures in JS and TS",
-  "icon": "images/comment_logo.svg",
+  "name": "vscode-solidity-comments",
+  "displayName": "VS Code Solidity comments",
+  "description": "Simplifies adding NatSpec doc tags in Solidity files.",
+  "icon": "images/vscode-solidity-comments.png",
   "galleryBanner": {
     "color": "#5c2d91",
     "theme": "dark"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/Microsoft/vscode-comment/issues"
+    "url": "https://github.com/Dexalot/vscode-solidity-comments/issues"
   },
-  "homepage": "https://github.com/Microsoft/vscode-comment/blob/master/README.md",
+  "homepage": "https://github.com/Dexalot/vscode-solidity-comments/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/vscode-comment.git"
+    "url": "https://github.com/Dexalot/vscode-solidity-comments.git"
   },
   "categories": [
     "Other"
   ],
-  "version": "0.0.8",
-  "publisher": "stevencl",
+  "version": "1.0.0",
+  "publisher": "dexalot",
   "engines": {
-    "vscode": "0.10.x"
+    "vscode": "0.10.0"
   },
   "main": "./out/extension",
   "activationEvents": [
@@ -32,13 +32,21 @@
     "commands": [
       {
         "command": "extension.addDocComments",
-        "title": "Add Doc Comments"
+        "title": "Add Solidity Comments"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.addDocComments",
+        "key": "ctrl+alt+d",
+        "mac": "shift+cmd+d"
       }
     ]
   },
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "build": "mkdir -p build && vsce package --out build/"
   },
   "devDependencies": {
     "vscode": "0.10.0"
