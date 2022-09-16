@@ -88,6 +88,10 @@ export function getFunctionParams(text: string): paramDef[] {
 			if (idx > -1) {
 				parts.splice(idx, 1);
 			}
+			idx = parts.indexOf("payable", 0);     // remove payable from parts
+			if (idx > -1) {
+				parts.splice(idx, 1);
+			}
 			if (parts.length == 1) {
 				params.push(new paramDef("", ""));
 			} else if (parts.length == 2) {
