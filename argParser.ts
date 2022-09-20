@@ -54,6 +54,18 @@ export function splitTextByKeyword(text: string, keyword: string): string[] {
 	return lines;
 }
 
+// removes keywords from the parts array
+export function removeKeywords(parts: string[]): string[] {
+	let keywordsToRemove = ["memory", "calldata", "storage", "payable"];
+	keywordsToRemove.forEach(element => {
+		let idx = parts.indexOf(element, 0);
+			if (idx > -1) {
+				parts.splice(idx, 1);
+			}
+	});
+	return parts;
+}
+
 //Assumes that the string passed in starts with ( and continues to ) and does not contain any comments
 export function getFunctionParams(text: string): paramDef[] {
 	var params: paramDef[] = [];
@@ -76,22 +88,7 @@ export function getFunctionParams(text: string): paramDef[] {
 			}
 			name_type = name_type.trim() // trim leading and trailing whitespace
 			let parts = name_type.split(" ");  // spitting a returns element (bool b, uint256 u, ...)
-			let idx = parts.indexOf("memory", 0);  // remove memory from parts
-			if (idx > -1) {
-				parts.splice(idx, 1);
-			}
-			idx = parts.indexOf("calldata", 0);    // remove calldata from parts
-			if (idx > -1) {
-				parts.splice(idx, 1);
-			}
-			idx = parts.indexOf("storage", 0);     // remove storage from parts
-			if (idx > -1) {
-				parts.splice(idx, 1);
-			}
-			idx = parts.indexOf("payable", 0);     // remove payable from parts
-			if (idx > -1) {
-				parts.splice(idx, 1);
-			}
+			parts = removeKeywords(parts);
 			if (parts.length == 1) {
 				params.push(new paramDef("", ""));
 			} else if (parts.length == 2) {
@@ -130,19 +127,8 @@ export function getReturnParams(text: string): paramDef[] {
 				numBraces--;
 			}
 			name_type = name_type.trim() // trim leading and trailing whitespace
-			const parts = name_type.split(" ");  // spitting a returns element (bool b, uint256 u, ...) or (bool, uint256, ...)
-			let idx = parts.indexOf("memory", 0);  // remove memory from parts
-			if (idx > -1) {
-				parts.splice(idx, 1);
-			}
-			idx = parts.indexOf("calldata", 0);    // remove calldata from parts
-			if (idx > -1) {
-				parts.splice(idx, 1);
-			}
-			idx = parts.indexOf("storage", 0);     // remove storage from parts
-			if (idx > -1) {
-				parts.splice(idx, 1);
-			}
+			let parts = name_type.split(" ");  // spitting a returns element (bool b, uint256 u, ...) or (bool, uint256, ...)
+			parts = removeKeywords(parts);
 			if (parts.length == 0) {
 				params.push(new paramDef("", ""));
 			} else if (parts.length == 2) {
