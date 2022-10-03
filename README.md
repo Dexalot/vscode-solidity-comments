@@ -4,12 +4,12 @@ This extension simplifies addition of NatSpec compliant @author, @title, @notice
 
 ## Installation
 
-The solidity-comments VS Code extension can be installed 1. from a VSIX file or 2. from VS Code Marketplace.
-1. The VSIX file can be downloaded from the [release page](https://github.com/Dexalot/vscode-solidity-comments/releases) on GitHub.
-   - Go to `Extensions` tab and click the `...` at the top.
+The solidity-comments VS Code extension can be installed 1. from VS Code Marketplace or 1. from a VSIX file.
+1. On the VS Code Marketplace the extension can be found with its name vscode-solidity-comments.
+   - Click Install.
+2. The VSIX file can be downloaded from the [release page](https://github.com/Dexalot/vscode-solidity-comments/releases) on GitHub.
+   - Go to `Extensions` tab in VS Code and click `...` at the top.
    - Select `Install from VSIX` and point the file selector dialog to the downloaded VSIX file.
-3. On the VS Code Marketplace the extension can be found with its name vscode-solidity-comments.
-   - Just clisk Install.
 
 ## Using
 
