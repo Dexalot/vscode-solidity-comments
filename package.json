@@ -25,8 +25,8 @@
   "categories": [
     "Other"
   ],
-  "version": "1.0.4",
-  "publisher": "chainbloq",
+  "version": "1.1.0",
+  "publisher": "chainbloq-labs",
   "engines": {
     "vscode": "^0.10.0"
   },
